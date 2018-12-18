@@ -16,6 +16,14 @@ For example:
 
 pip install psycopg2
 
+Then, edit services.txt and replace the lines with the service names that you'd like to monitor and execute monitor.py
+
+If you like you can make a cron as well.
+
+Also, you can use that script for all devices/servers/clients that you can connect via SSH.
+
+That's all !
+
 
 Description:
 
@@ -31,25 +39,28 @@ You can see the screenshots  below. I have stopped the Textractor services. The 
 
 ![alt text](https://github.com/goksinenki/python-linux-service-monitor/blob/master/servicemonitor1.png)
 
+![alt text](https://github.com/goksinenki/python-linux-service-monitor/blob/master/servicemonitor2.png)
 
-INSTALLATION (Windows/Linux)
+Also it sends an e-mail with an attachment (log file) as below because one or more services status has been changed.
 
-Installation
+![alt text](https://github.com/goksinenki/python-linux-service-monitor/blob/master/servicemonitor3.png)
 
-Just install the required modules/libraries to your python project directory if you do not have them
+We executed the script again to understand what it is doing when nothing changed. It says no action needed when there is no service status change.
 
-xlsxwriter psycopg2 email smtplib
+![alt text](https://github.com/goksinenki/python-linux-service-monitor/blob/master/servicemonitor4.png)
 
-For example:
 
-pip install psycopg2
+We have started the services again and then we have executed the script again. It says status changed and it sends e-mail again for status change.
+Also, it save the data to database as you can see below.
 
-Open ipler.txt and replace ip addresses with your network device ipaddresses. Open cisco_backup.py and replace the required information with yours. (ssh username, ssh password, cisco enable password, ftp server ip address, ftp account username and password)
+![alt text](https://github.com/goksinenki/python-linux-service-monitor/blob/master/servicemonitor5.png)
 
-Then, execute cisco_backup.py
+![alt text](https://github.com/goksinenki/python-linux-service-monitor/blob/master/servicemonitor6.png)
 
-If you like you can schedule that script when you would like to backup your devices config.
+Notes:  For SMTP I have used my external smtp server you can changed the code as you like.
+For Database I have created the  user and database from terminal and grant access after that I have  installed phpPgAdmin for  easy management.
+I have modified postgresql.conf to listen all ip addresses.
 
-Also, you can use that script for all devices/servers/clients that you can connect via SSH.
+Thank you for reading ! :)
 
-That's all !
+
