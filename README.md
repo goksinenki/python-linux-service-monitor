@@ -29,8 +29,7 @@ In part 2, monitor.py sends a query to monitor_db to checking the database for e
 
 You can see the screenshots  below. I have stopped the Textractor services. The script prints the status of service to console  and save the data to database.
 
-
-
+![alt text](https://github.com/goksinenki/python-linux-service-monitor/blob/master/servicemonitor1.png)
 
 
 INSTALLATION (Windows/Linux)
